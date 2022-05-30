@@ -6,6 +6,7 @@ public class ActivityMonitor extends JFrame {
     private MemoryAdaptor mem;
     private DeskAdaptor desk;
 
+    // constructor with no parameters, builds the UI of the program.
     public ActivityMonitor() {
         setTitleAndLayout();
         init();
@@ -27,12 +28,14 @@ public class ActivityMonitor extends JFrame {
         pack();
     }
 
+    // initiates instances of the Adaptor classes
     public void init() {
         cpu = new CpuAdaptor();
         mem = new MemoryAdaptor();
         desk = new DeskAdaptor();
     }
 
+    //Accessor methods of each of the adaptor classes
     public String getCpuTitle() {
         return cpu.getAlertName();
     }
